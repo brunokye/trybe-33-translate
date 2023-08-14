@@ -23,8 +23,8 @@ class LanguageModel(AbstractModel):
         data = cls._collection.find()
         result = []
 
-        for d in data:
-            language = cls(d)
+        for info in data:
+            language = cls(info)
             result.append(language.to_dict())
 
         return result
